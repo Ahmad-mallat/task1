@@ -1,0 +1,132 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    max-width: 1200px; /* Ensure it doesn't exceed 1200px width */
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+}
+
+.icon {
+    width: 200px;
+    height: 100%; /* Use height: 100% for better alignment */
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+}
+
+.menu {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    justify-content: center; /* Center align menu items */
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin-left: 30px; /* Adjust margin between menu items */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ff7200;
+}
+
+.search {
+    margin-left: auto; /* Push search to the right */
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn {
+    margin-left: 10px; /* Add spacing between input and button */
+    padding: 8px 15px;
+    background-color: #ff7200;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e66000;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        height: auto; /* Allow navbar to adjust its height */
+    }
+
+    .icon,
+    .menu,
+    .search {
+        width: 100%; /* Full width on small screens */
+        padding: 10px; /* Add padding for spacing */
+        text-align: center; /* Center align text */
+    }
+
+    .logo {
+        padding: 10px 0;
+    }
+
+    ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .srch {
+        width: 100%; /* Full width input */
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 100%; /* Full width button */
+        margin-left: 0;
+    }
+}
