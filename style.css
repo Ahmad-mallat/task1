@@ -92,6 +92,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+.hello{
+    font-size: 50px;
+    color: #ff7200;
+}
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
