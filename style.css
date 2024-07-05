@@ -6,50 +6,83 @@
 body{
     background-color:rgb(125, 101, 71);
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    /* @media only screen and (max-width: 480px) {
+    flex-direction: row;
+        
+    } */
+
+}
+header{
+    position: relative;
 }
 
-.navbar{
-    width: 1200px;
-    height: 75px;
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo{
-    color: #ff7200;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-    margin-top: 5px
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 98dvw;
+    height: max-content;
+    padding: 10px;
+    position: static;
+    gap: 10px;
+    margin-block-end: 10px;
+    background-color: bisque;
+    @media only screen and (max-width: 680px) {
+        display: grid;
+        }
     
 }
 
+.img-label{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+}
+.relative {
+    position: relative;
+    top: -15px;
+}
+
+.relative p{
+    background-color: #f0f0f056;
+    position: absolute;
+    color: #362727;
+    font-size: large;
+    font-weight: bold;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
 ul{
-    float: left;
+    /* float: left; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    background-color: aqua;
+    gap: 20px;
 }
 
 ul li{
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
+    /* margin-left: 62px;
+    margin-top: 27px; */
     font-size: 14px;
+    background-color: #ff7200;
 }
-
 ul li a{
     text-decoration: none;
     color: #fff;
@@ -61,13 +94,16 @@ ul li a{
 ul li a:hover{
     color: #ff7200;
 }
+.icon img{
+    width: 50px;
+    height: 50px;
+}
 
 .search{
     width: 330px;
-    float: left;
-    margin-left: 270px;
+    /* float: left;
+    margin-left: 270px; */
 }
-
 .srch{
     font-family: 'Times New Roman';
     width: 200px;
@@ -109,57 +145,79 @@ ul li a:hover{
     outline: none;
 }
 
-.content{
-    width: 1200px;
-    position: relative;
-}
-
-.section-grid {
+.container{
+    display: flex;
+    flex-direction: row;
+    max-width: 198dvw;
+    overflow-y: auto;
+    justify-content: center;
+    gap: 10px;
+    @media only screen and (max-width: 680px) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-    text-align: center;
+    }
+}
+
+.container img {
+    /* display: flex;
+    flex-direction :column; */
+    width: 200px;
+    height: 200px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    margin-left: 30px;
-}
-.section-grid p{
-    padding-bottom: 40px;
-    width: 250px;
-    text-align: justify;
-    margin-left: 70px;
 }
 
-#img1{
-    width: 200px;
-    height: 200px;
-    margin-left: 90px;
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e61919;
+    border-radius: 10px;
 }
-#img2{
-    width: 200px;
-    height: 200px;
-    margin-left: 90px;
-}
-#img3{
-    width: 200px;
-    height: 200px;
-    margin-left: 90px;
-}
-section{
-    margin-left: 50px;
-}
+
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/* chatgpt13 */
+
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    position: fixed;
+    background-color: #f0f0f0;  
+    padding: 10px;
+    text-align: center; 
+    overflow: hidden;
+    width: 98dvw;
+    margin-inline: 10px;
+    height: 30px;
     bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-}
+  }
+  
+  .footer-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+        color: #fff;
+        font-family: Arial;
+      height:20px;
+      
+        font-size: xx-large;
+       
+     
+  }
+  
